@@ -81,7 +81,7 @@ function show_date_from_base($date)
 	
 	$agi->set_variable("CDR(call_num)", $cid);
 	
-	if($cid == "553470"){
+	if($cid == "XXXXXX"){ //Zadarma
 		$db_cdr = new MyDB('master.db');
 		$sql="select * from cdr where call_num != 'sms_ussd' AND channel NOT LIKE '%ussd%' AND dist = 'in' GROUP BY call_num ORDER BY calldate DESC LIMIT 0,5";
 		$calls = $db_cdr->doit($sql);    	
